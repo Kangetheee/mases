@@ -17,9 +17,11 @@ char *getEnvfull(const char *name){
         buf[idx] = '=';
         if(strncmp(buf, environ[i], strlen(buf)) == 0){
             free(buf);
-            return(NULL);
+            return (environ[i]);  
         }
     }
+    free(buf);
+    return(NULL);
 }
 #if 0
 int main(int ac, char **av){
