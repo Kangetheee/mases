@@ -9,6 +9,6 @@ int main(int acc __attribute__((unused)), char **av __attribute__ ((unused)), ch
     unsigned int i;
     for(i = 0; env[i];i++){
         puts(env[i]);
-    return 0;
     }
+    return 0;
 }
