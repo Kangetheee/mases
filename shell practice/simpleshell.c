@@ -13,7 +13,7 @@ int main(){
             break;
         }
 
-        //remove trailing new characters
+        /*remove trailing new characters*/
         command[strcspn(command, "\n")] = '\0';
 
         pid_t pid = fork();
@@ -21,8 +21,10 @@ int main(){
             perror("fork");
             exit(EXIT_FAILURE);
         } else if(pid == 0){
-            //child
-            //parse command
+            /**
+            *child
+            *parse command
+            */
 
             char* tokens[MAX_COMMAND_LENGTH];
             char* token = strtok(command, " ");
