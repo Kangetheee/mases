@@ -16,7 +16,7 @@ int main(void){
         }
         if(pid == 0){
             char *argv[] = {"Habari", NULL};
-            if(exec(argv[0], argv, NULL)== -1){
+            if(execl(argv[0], argv, NULL)== -1){
                 perror("exec() failure\n");
                 exit(EXIT_FAILURE);
             }
