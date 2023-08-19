@@ -10,7 +10,7 @@ char **path_ptrs(void){
     char *path = getEnv("PATH");
     char *str = path;
     char **dir = tokenize(str, ":");
-    unsigned i;
+    unsigned int i;
 
     if (!(path))
         dprintf(2, "$PATH not found!\n"), exit(EXIT_FAILURE);
@@ -39,7 +39,7 @@ path_list *buildList(char **ptrs){
         if(!(temp->next = malloc(sizeof(path_list))))
           dprintf(2, "malloc() failure\n"),exit(EXIT_FAILURE);
     temp = temp -> next;
-    temp -> dir_node = ptr[i];
+    temp -> dir_node = ptrs[i];
     temp ->next = NULL;
     }
 }
@@ -52,7 +52,7 @@ path_list *buildList(char **ptrs){
 void freeList(path_list *head, int tok){
     path_list *temp;
 
-    //char **ptr;
+    /*char **ptr;*/
     int i;
 
     //ptr = &(head->dir_node);
