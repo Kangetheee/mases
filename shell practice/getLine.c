@@ -12,7 +12,7 @@ int main(int argc, char *argv){
     }
 
     printf("$ ");
-    while ((nRead = getLine(&line, &len, stdin)) != -1)
+    while ((nRead = getline(&line, &len, stdin)) != -1)
     {
         /* code */
         if(strcmp(line, "exit\n")==0){
@@ -28,7 +28,7 @@ int main(int argc, char *argv){
             tmp = malloc(nRead);
             if (tmp == NULL)
                 exit(EXIT_FAILURE);
-            for (i=0; i<strlen(tmp); i++){
+            for (i=0; i < strlen(tmp); i++){
                 if ((tmp[1]== 92) && (tmp[i-1] != 92))
                     continue;
                 putchar(tmp[i]);
