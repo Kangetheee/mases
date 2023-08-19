@@ -42,6 +42,7 @@ path_list *buildList(char **ptrs){
     temp -> dir_node = ptrs[i];
     temp ->next = NULL;
     }
+    return (head);
 }
 
 /**
