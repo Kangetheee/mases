@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * strlen - returns the length of a string
+ * _strlen - returns the length of a string
  *
  * Return: integer length of string
  */
-int strlen(const char *s)
+int _strlen(const char *s)
 {
 	int i = 0;
 
@@ -18,12 +18,12 @@ int strlen(const char *s)
 }
 
 /**
- * strcmp - Compare two strings.
+ * _strcmp - Compare two strings.
  * Return: 0 if @s1 and @s2 are equal,
  *         a negative value if @s1 is less than @s2,
  *         or a positive value if @s1 is greater than @s2.
  */
-int strcmp(const char *s1, const char *s2)
+int _strcmp(const char *s1, const char *s2)
 {
 	while (*s1 != '\0' && *s2 != '\0' && *s1 == *s2)
 	{
@@ -35,12 +35,12 @@ int strcmp(const char *s1, const char *s2)
 }
 
 /**
- * strncmp - Compare two strings up to a specified length.
+ * _strncmp - Compare two strings up to a specified length.
  *
  * Return: 0 if the strings are equal up to n characters, negative value
  *         if s1 is less than s2, or positive value if s1 is greater than s2.
  */
-int strncmp(const char *s1, const char *s2, size_t n)
+int _strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char c1, c2;
 
@@ -59,11 +59,11 @@ int strncmp(const char *s1, const char *s2, size_t n)
 }
 
 /**
- * strstr - checks if needle starts with haystack
+ * _strstr - checks if needle starts with haystack
  *
  * Return: address of next char of haystack or NULL
  */
-char *strstr(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)
 {
 	int i;
 
@@ -91,12 +91,12 @@ char *strstr(char *haystack, char *needle)
 }
 
 /**
- * strchr - a function that locates a character in a string
+ * _strchr - a function that locates a character in a string
  *
  * Return: first occurence of charatcer or null if not found
 */
 
-char *strchr(char *s, char c)
+char *_strchr(char *s, char c)
 {
 	while (*s != '\0')
 	{

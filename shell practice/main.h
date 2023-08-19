@@ -16,7 +16,7 @@ typedef struct path_list
     /* data */
     char *dir_node;
     struct path_list *next;
-};
+} path_list;
 
 /*functions*/
 

@@ -9,7 +9,7 @@ int main(){
 
     while(1){
         printf("#createwithc$ ");
-        if(getLine(&command, &command_size, stdin) == -1){
+        if(getline(&command, &command_size, stdin) == -1){
             break;
         }
 

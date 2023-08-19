@@ -1,11 +1,11 @@
 #include "shell.h"
 
 /**
- * getLine - Read input from the standard input.
+ * _getLine - Read input from the standard input.
  *
  * Return: The string enter by the user.
 */
-void *getLine(void)
+void *_getLine(void)
 {
 	static char buffer[BUFFER_SIZE];
 	static int buf_pos, buf_size;

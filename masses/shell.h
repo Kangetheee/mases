@@ -29,7 +29,7 @@ void prompt(void);
 char *getInput(void);
 void freeLastInput(void);
 /* getLine.c*/
-void *getline(void);
+void *_getline(void);
 
 /* builtIn functions */
 int checkForBuiltIn(char **args);
@@ -69,29 +69,29 @@ void freeTokens(char **ptr);
 void freePath(void);
 
 /* error.c */
-void puts(char *str);
+void _puts(char *str);
 void _puterror(char *err);
 
 /* util1.c */
-int strlen(const char *);
-int strcmp(const char *s1, const char *s2);
-int strncmp(const char *s1, const char *s2, size_t n);
-char *strstr(char *haystack, char *needle);
-char *strchr(char *s, char c);
+int _strlen(const char *);
+int _strcmp(const char *s1, const char *s2);
+int _strncmp(const char *s1, const char *s2, size_t n);
+char *_strstr(char *haystack, char *needle);
+char *_strchr(char *s, char c);
 
-/* utils_funcs2.c */
-char *strcpy(char *, char *);
-char *strcat(char *, const char *);
-char *strdup(const char *);
+/* utilss2.c */
+char *_strcpy(char *, char *);
+char *_strcat(char *, const char *);
+char *_strdup(const char *);
 int _putchar(char);
-unsigned int strspn(char *s, char *accept);
+unsigned int _strspn(char *s, char *accept);
 
-/* utils_funcs3.c */
-int atoi(const char *str);
-char *memset(char *, char, unsigned int);
-char *memcpy(char *dest, char *src, unsigned int n);
-void *realloc(void *, unsigned int, unsigned int);
-void *calloc(unsigned int nmemb, unsigned int size);
+/* util3.c */
+int _atoi(const char *str);
+char *_memset(char *, char, unsigned int);
+char *_memcpy(char *dest, char *src, unsigned int n);
+void *_realloc(void *, unsigned int, unsigned int);
+void *_calloc(unsigned int nmemb, unsigned int size);
 
 
 
