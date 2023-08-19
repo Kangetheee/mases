@@ -56,7 +56,7 @@ int main(void){
     setEnv("USER", "Noah", 1);
     printf("After: %s\n", getEnvfull("USER"));
     setEnv("EII", "Pointless", 1);
-    //printf("%s\n", getEnvfull("EII"));
+    /*printf("%s\n", getEnvfull("EII"));*/
     return 0;
     
 }
