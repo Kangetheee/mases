@@ -11,7 +11,7 @@ void forkstr(char *command, char **env) {
 
     pid = fork();
     if (pid < 0) {
-        perror("fork fail");
+        perror("fork() fail");
         exit(1);
     } else if (pid == 0) {
 	char *argv[2];
