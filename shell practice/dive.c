@@ -8,21 +8,21 @@
 
 int main(void)
 {
-	char *arg = NULL;
-	char **argv;
-	size_t len = 0;
-	ssize_t nread;
-	pid_t id;
+	char *arg = NULL; ///array of pointer is empty
+	char **argv; //pointer to char
+	size_t len = 0; //unsigned size of char for the object(initialized}
+	ssize_t nRead; // variable to to store char read
+	pid_t process;
 	int status, i;
 	
 	printf("$ ");
-	while((nread = getline(&arg, &len, stdin)) != -1)
+	while((nRead = getline(&arg, &len, stdin)) != -1) //loop breaks if userinput is zero
 	{
-		if (strcmp(arg, "exit\n") == 0)
+		if (strcmp(arg, "exit\n") == 0) //if string is empty the program breaks
 			break;
-		arg[nread - 1] = '\0';
+		arg[nRead - 1] = '\0';
 		argv = tokenize(arg, " ");
-		if ((id = fork()) == -1)
+		if ((process = fork()) == -1)
 		{
 			perror("Error");
 			for (i = 0; argv[i]; i++)
@@ -31,7 +31,7 @@ int main(void)
 			free(arg);
 			exit(EXIT_FAILURE);
 		}
-		if (id == 0)
+		if (process == 0)
 		{
 
 			if (execve(argv[0], argv, NULL) == -1)
