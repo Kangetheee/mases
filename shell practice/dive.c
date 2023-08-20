@@ -20,7 +20,7 @@ int main(void)
 	{
 		if (strcmp(arg, "exit\n") == 0) //if string is empty the program breaks
 			break;
-		arg[nRead - 1] = '\0';
+		arg[nRead - 1] = '\0';//remove trailing space
 		argv = tokenize(arg, " ");
 		if ((process = fork()) == -1)
 		{
