@@ -1,4 +1,4 @@
-#ifndef MAIN_H
+i#ifndef MAIN_H
 #define MAIN_H
 #define _GNU_SOURCE
 
@@ -9,6 +9,7 @@
 #include <unistd.h>
 #include <sys/types.h>
 #include <sys/wait.h>
+#include <stddef.h>
 
 
 typedef struct path_list
