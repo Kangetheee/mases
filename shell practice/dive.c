@@ -19,6 +19,7 @@ int main(void)
 		arg[nRead - 1] = '\0';/*remove trailing space*/
 		argv = tokenize(arg, " ");
 
+		/*prompt user for custom path*/
 		char customPath[MAX_PATH_LENGTH];
                 printf("Enter custom path for commands: ");
                 fgets(customPath, sizeof(customPath), stdin);
