@@ -39,7 +39,7 @@ int main(){
 
             //execute command
             if (wait(NULL) == -1){
-                perror("ngoja");
+                perror("Ngoja");
                 exit(EXIT_FAILURE);
             }
             
